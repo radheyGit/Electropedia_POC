@@ -1,0 +1,264 @@
+<html>
+<head>
+<title>TestNG:  RestAssuredTests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RestAssuredTests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>37/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat May 28 17:39:46 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>161 seconds (161995 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkServerType_TC003()'><b>checkServerType_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkStatusLine()'><b>checkStatusLine</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.checkContentLength_TC002()'><b>checkContentLength_TC002</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC004_Update_Booking.checkContentEncoder_TC004()'><b>checkContentEncoder_TC004</b><br>Test class: com.bookerapi.testcases.TC004_Update_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC004_Update_Booking@6abdec0e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.checkContententType_TC002()'><b>checkContententType_TC002</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkStatusLine_TC001()'><b>checkStatusLine_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkResponseBody_TC003()'><b>checkResponseBody_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking<br>Parameters: Radhey, Garode, 10000, true, 2018-11-23, 2018-11-30, Lunch</td>
+<td></td>
+<td>1</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC004_Update_Booking.checkContentType_TC004()'><b>checkContentType_TC004</b><br>Test class: com.bookerapi.testcases.TC004_Update_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC004_Update_Booking@6abdec0e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkResponseBody_TC003()'><b>checkResponseBody_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking<br>Parameters: John, Canedy, 5000, true, 2020-07-12, 2020-07-18, Breakfast</td>
+<td></td>
+<td>1</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkResponseBody_TC003()'><b>checkResponseBody_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking<br>Parameters: Andy, Smith, 2563, true, 2019-03-05, 2019-03-23, Dinner</td>
+<td></td>
+<td>1</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkResponseBody_TC003()'><b>checkResponseBody_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking<br>Parameters: Joi, Woshinton, 5665, true, 2021-09-16, 2021-03-19, Afternoon Tea</td>
+<td></td>
+<td>1</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC005_Delete_Booking.checkContentType_TC005()'><b>checkContentType_TC005</b><br>Test class: com.bookerapi.testcases.TC005_Delete_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC005_Delete_Booking@28f4f300</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.checkResponseTime_TC002()'><b>checkResponseTime_TC002</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.checkStatusCode_TC002()'><b>checkStatusCode_TC002</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC005_Delete_Booking.checkContentEncoder_TC005()'><b>checkContentEncoder_TC005</b><br>Test class: com.bookerapi.testcases.TC005_Delete_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC005_Delete_Booking@28f4f300</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkContentType_TC003()'><b>checkContentType_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC004_Update_Booking.checkServerType_TC004()'><b>checkServerType_TC004</b><br>Test class: com.bookerapi.testcases.TC004_Update_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC004_Update_Booking@6abdec0e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkResponseTime_TC001()'><b>checkResponseTime_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC004_Update_Booking.checkResponseBody_TC004()'><b>checkResponseBody_TC004</b><br>Test class: com.bookerapi.testcases.TC004_Update_Booking<br>Parameters: Radhey, Garode, 10000, true, 2020-03-21, 2022-09-26, Dinner</td>
+<td></td>
+<td>1</td>
+<td>com.bookerapi.testcases.TC004_Update_Booking@6abdec0e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC005_Delete_Booking.checkStatusLine_TC005()'><b>checkStatusLine_TC005</b><br>Test class: com.bookerapi.testcases.TC005_Delete_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC005_Delete_Booking@28f4f300</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkContentType_TC001()'><b>checkContentType_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC004_Update_Booking.checkStatusLine_TC004()'><b>checkStatusLine_TC004</b><br>Test class: com.bookerapi.testcases.TC004_Update_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC004_Update_Booking@6abdec0e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkServerType_TC001()'><b>checkServerType_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC005_Delete_Booking.checkStatusCode_TC005()'><b>checkStatusCode_TC005</b><br>Test class: com.bookerapi.testcases.TC005_Delete_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC005_Delete_Booking@28f4f300</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkStatusCode_TC003()'><b>checkStatusCode_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.tearDown()'><b>tearDown</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC005_Delete_Booking.checkServerType_TC005()'><b>checkServerType_TC005</b><br>Test class: com.bookerapi.testcases.TC005_Delete_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC005_Delete_Booking@28f4f300</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkContentEncoding_TC001()'><b>checkContentEncoding_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC004_Update_Booking.checkStatusCode_TC004()'><b>checkStatusCode_TC004</b><br>Test class: com.bookerapi.testcases.TC004_Update_Booking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC004_Update_Booking@6abdec0e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkStatusCode_TC001()'><b>checkStatusCode_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkResponseBody_TC001()'><b>checkResponseBody_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC003_Post_CreateBooking.checkContentEncoder_TC003()'><b>checkContentEncoder_TC003</b><br>Test class: com.bookerapi.testcases.TC003_Post_CreateBooking</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC005_Delete_Booking.checkResponseBody_TC005()'><b>checkResponseBody_TC005</b><br>Test class: com.bookerapi.testcases.TC005_Delete_Booking</td>
+<td></td>
+<td>3</td>
+<td>com.bookerapi.testcases.TC005_Delete_Booking@28f4f300</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.checkStatusLine_TC002()'><b>checkStatusLine_TC002</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC002_Get_Booking_By_Id.checkResponseBody_TC002()'><b>checkResponseBody_TC002</b><br>Test class: com.bookerapi.testcases.TC002_Get_Booking_By_Id</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkCookies_TC001()'><b>checkCookies_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+<tr>
+<td title='com.bookerapi.testcases.TC001_Get_All_Booking_Ids.checkContentLength_TC001()'><b>checkContentLength_TC001</b><br>Test class: com.bookerapi.testcases.TC001_Get_All_Booking_Ids</td>
+<td></td>
+<td>0</td>
+<td>com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3</td></tr>
+</table><p>
+</body>
+</html>

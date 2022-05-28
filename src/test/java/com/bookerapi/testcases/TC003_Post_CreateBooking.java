@@ -1,20 +1,19 @@
 package com.bookerapi.testcases;
 
 import org.json.simple.JSONObject;
-import org.junit.BeforeClass;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.bookerapi.base.TestBase;
 import com.bookerapi.util.MyRetry;
+import com.bookerapi.util.XLUtils;
 
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-
+//@Listeners(com.stockaccounting.listeners.Listeners.class)
 public class TC003_Post_CreateBooking extends TestBase {
 
 	@BeforeMethod
@@ -25,7 +24,7 @@ public class TC003_Post_CreateBooking extends TestBase {
 		cred.put("password", "password123");
 
 		log.info("**********Starting TC003_Post_CreateBooking***********");
-		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		RestAssured.baseURI = prop.getProperty("baseURI");
 
 		httpRequest = RestAssured.given();
 		response = httpRequest.contentType("application/json").accept("application/json").body(cred).post("/auth");
@@ -34,39 +33,65 @@ public class TC003_Post_CreateBooking extends TestBase {
 		Thread.sleep(5000);
 	}
 
-	@Test(retryAnalyzer = MyRetry.class,priority = 0)
-	public void checkResponseBody() {
-		log.info("**********TC003_checkResponseBody***********");
+	@Test(retryAnalyzer = MyRetry.class,priority = 0,dataProvider = "bookerDataProvider")
+	public void checkResponseBody_TC003(String firstName,String lastName,String totalPrice,String depositPaid, String checkin,String checkout,String additionalNeeds) {
 		Response response = RestAssured.given()
 				   					   .contentType("application/json")
 				   					   .accept("application/json")
 				   					   .body("{\r\n"
-									   		+ "    \"firstname\": \"Radhey\",\r\n"
-									   		+ "    \"lastname\": \"Garode\",\r\n"
-									   		+ "    \"totalprice\": 50000.00,\r\n"
-									   		+ "    \"depositpaid\": true,\r\n"
+									   		+ "    \"firstname\": \""+firstName.trim()+"\",\r\n"
+									   		+ "    \"lastname\": \""+lastName.trim()+"\",\r\n"
+									   		+ "    \"totalprice\": "+totalPrice.trim()+",\r\n"
+									   		+ "    \"depositpaid\": "+depositPaid.trim()+",\r\n"
 									   		+ "    \"bookingdates\": {\r\n"
-									   		+ "        \"checkin\": \"2022-03-21\",\r\n"
-									   		+ "        \"checkout\": \"2022-09-26\"\r\n"
+									   		+ "        \"checkin\": \""+checkin.trim()+"\",\r\n"
+									   		+ "        \"checkout\": \""+checkout.trim()+"\"\r\n"
 									   		+ "    },\r\n"
-									   		+ "    \"additionalneeds\": \"Dinner\"\r\n"
+									   		+ "    \"additionalneeds\": \""+additionalNeeds.trim()+"\"\r\n"
 									   		+ "}")
 				   					   .post("/booking");
 		log.info("Json Response " + response.getBody().jsonPath().prettify());
-		JsonPath jsonPath = response.getBody().jsonPath();
-		Assert.assertEquals(jsonPath.get("firstname"), true);
-		Assert.assertEquals(jsonPath.get("lastname"), true);
-		Assert.assertEquals(jsonPath.get("totalprice"), true);
-		Assert.assertEquals(jsonPath.get("depositpaid"), true);
-		Assert.assertEquals(jsonPath.get("bookingdates"), true);
-		Assert.assertEquals(jsonPath.get("checkin"), true);
-		Assert.assertEquals(jsonPath.get("checkout"), true);
-		Assert.assertEquals(jsonPath.get("additionalneeds"), true);
+		String body = response.getBody().asString();
+		Assert.assertEquals(body.contains(firstName),true);
+		Assert.assertEquals(body.contains(lastName), true);
+		Assert.assertEquals(body.contains(totalPrice), true);
+		Assert.assertEquals(body.contains(depositPaid), true);
+		Assert.assertEquals(body.contains(checkin), true);
+		Assert.assertEquals(body.contains(checkout), true);
+		Assert.assertEquals(body.contains(additionalNeeds), true);
 	}
-
+	/***
+	 * This method is used to fetch data from Excel sheet and store it 
+	 * into String Array
+	 * @author Radhey
+	 * @return String [][]
+	 */
+	@DataProvider(name = "bookerDataProvider")
+	public String [][] getBookerData_TC003() {
+		
+		String xlFileName = prop.getProperty("ExcelFile");
+		String xlSheetName = prop.getProperty("SheetName");
+		int rowCount = XLUtils.getRowCount(xlFileName, xlSheetName);
+		int cellCount = XLUtils.getCellCount(xlFileName, xlSheetName, 1);
+		
+		String [][] bookerData = new String [rowCount][cellCount];
+		
+		for(int i=1;i<=rowCount;i++) {
+			for(int j=0;j<cellCount;j++) {
+				bookerData[i-1][j] = XLUtils.getCellData(xlFileName, xlSheetName, i, j);
+			}
+		}
+		/*
+		String [][] bookerData = {{"Radhey","Garode","10000","true","2020-03-21","2022-09-26","Dinner"},
+								  {"John","Hex","5000","true","2021-05-15","2021-05-18","Lunch"},
+								  {"Roby","Smith","2200","true","2019-07-02","2019-07-10","Dinner"},
+								  {"Mandy","Morgon","4800","true","2018-06-28","2018-07-03","Breakfast"}};
+		*/
+		return bookerData;
+	}
+	
 	@Test(retryAnalyzer = MyRetry.class)
-	public void checkStatusCode() {
-		log.info("**********TC003_checkStatusCode***********");
+	public void checkStatusCode_TC003() {
 		int statusCode = response.getStatusCode();
 		log.info("Status Code " + statusCode);
 		Assert.assertEquals(statusCode, 200);
@@ -74,31 +99,27 @@ public class TC003_Post_CreateBooking extends TestBase {
 
 	@Test(retryAnalyzer = MyRetry.class)
 	public void checkStatusLine() {
-		log.info("**********TC003_checkStatusLine***********");
 		String statusLine = response.getStatusLine();
 		log.info("Status Line " + statusLine);
 		Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
 	}
 
 	@Test(retryAnalyzer = MyRetry.class)
-	public void checkContentType() {
-		log.info("**********TC003_checkContentType***********");
+	public void checkContentType_TC003() {
 		String contentType = response.contentType();
 		log.info("content Type " + contentType);
 		Assert.assertEquals(contentType, "application/json; charset=utf-8");
 	}
 
 	@Test(retryAnalyzer = MyRetry.class)
-	public void checkServerType() {
-		log.info("**********TC003_checkServerType***********");
+	public void checkServerType_TC003() {
 		String server = response.header("Server");
 		log.info("Server " + server);
 		Assert.assertEquals(server, "Cowboy");
 	}
 
 	@Test(retryAnalyzer = MyRetry.class)
-	public void checkContentEncoder() {
-		log.info("**********TC003_checkContentEncoder***********");
+	public void checkContentEncoder_TC003() {
 		String contentEncoder = response.header("Content-Encoder");
 		log.info("Content Encoder " + contentEncoder);
 		Assert.assertEquals(contentEncoder, null);
