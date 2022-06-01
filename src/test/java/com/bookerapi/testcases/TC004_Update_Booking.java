@@ -80,6 +80,10 @@ public class TC004_Update_Booking extends TestBase{
 		  Assert.assertEquals(body.contains("additionalneeds"), true);
 	}
 	
+	/***
+	 * @author Radhey
+	 * @return String [][]
+	 */
 	@DataProvider(name = "bookerDataProvider")
 	public String [][] getBookerData() {
 		String [][] bookerData = {{"Radhey","Garode","10000","true","2020-03-21","2022-09-26","Dinner"}};

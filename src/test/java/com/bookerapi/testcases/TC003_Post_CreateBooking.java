@@ -32,7 +32,16 @@ public class TC003_Post_CreateBooking extends TestBase {
 
 		Thread.sleep(5000);
 	}
-
+	/***
+	 * @author Radhey
+	 * @param firstName
+	 * @param lastName
+	 * @param totalPrice
+	 * @param depositPaid
+	 * @param checkin
+	 * @param checkout
+	 * @param additionalNeeds
+	 */
 	@Test(retryAnalyzer = MyRetry.class,priority = 0,dataProvider = "bookerDataProvider")
 	public void checkResponseBody_TC003(String firstName,String lastName,String totalPrice,String depositPaid, String checkin,String checkout,String additionalNeeds) {
 		Response response = RestAssured.given()

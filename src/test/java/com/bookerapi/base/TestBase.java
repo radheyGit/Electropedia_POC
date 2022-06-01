@@ -36,7 +36,6 @@ public class TestBase {
 		
 	}
 
-
 	public void setUp() {
 		log = Logger.getLogger("BookerAPI");
 		PropertyConfigurator.configure("log4j.properties");

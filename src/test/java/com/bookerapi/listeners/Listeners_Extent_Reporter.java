@@ -1,7 +1,5 @@
 package com.bookerapi.listeners;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -17,6 +15,7 @@ public class Listeners_Extent_Reporter extends TestListenerAdapter{
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extentReports;
 	public ExtentTest test;
+	
 	
 	@Override
 	public void onStart(ITestContext testContext) {
