@@ -8,6 +8,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.bookerapi.base.TestBase;
+import com.bookerapi.request.BookingRequest;
+import com.bookerapi.request.Bookingdates;
 import com.bookerapi.util.MyRetry;
 import com.bookerapi.util.XLUtils;
 
@@ -49,22 +51,24 @@ public class TC004_Update_Booking extends TestBase{
 	
 	@Test(retryAnalyzer = MyRetry.class,priority = 0,dataProvider = "bookerDataProvider")
 	public void checkResponseBody_TC004(String firstName,String lastName,String totalPrice,String depositPaid, String checkin,String checkout,String additionalNeeds) {
+		Bookingdates dates = new Bookingdates();
+		dates.setCheckin(checkin.trim());
+		dates.setCheckout(checkout.trim());
+		
+		BookingRequest request = new BookingRequest();
+		request.setFirstname(firstName.trim());
+		request.setLastname(lastName.trim());
+		request.setTotalprice(Integer.parseInt(String.valueOf(totalPrice.trim())));
+		request.setDepositpaid(Boolean.parseBoolean(String.valueOf(depositPaid.trim())));
+		request.setAdditionalneeds(additionalNeeds.trim());
+		request.setBookingdates(dates);
+		
 		Response response = RestAssured.given()
 				   					   .contentType("application/json")
 									   .accept("application/json")
 									   .auth().preemptive()
 									   .basic("admin","password123")
-									   .body("{\r\n"
-										   		+ "    \"firstname\": \""+firstName.trim()+"\",\r\n"
-										   		+ "    \"lastname\": \""+lastName.trim()+"\",\r\n"
-										   		+ "    \"totalprice\": "+totalPrice.trim()+",\r\n"
-										   		+ "    \"depositpaid\": "+depositPaid.trim()+",\r\n"
-										   		+ "    \"bookingdates\": {\r\n"
-										   		+ "        \"checkin\": \""+checkin.trim()+"\",\r\n"
-										   		+ "        \"checkout\": \""+checkout.trim()+"\"\r\n"
-										   		+ "    },\r\n"
-										   		+ "    \"additionalneeds\": \""+additionalNeeds.trim()+"\"\r\n"
-										   		+ "}")
+									   .body(request)
 									   .put("/booking/"+id+"");
 		
 		log.info("Json Response " + response.getBody().jsonPath().prettify());

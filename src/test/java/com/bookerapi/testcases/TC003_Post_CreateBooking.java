@@ -8,10 +8,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.bookerapi.base.TestBase;
+import com.bookerapi.request.BookingRequest;
+import com.bookerapi.request.Bookingdates;
+import com.bookerapi.response.BookingResponse;
 import com.bookerapi.util.MyRetry;
 import com.bookerapi.util.XLUtils;
 
 import io.restassured.RestAssured;
+import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
 //@Listeners(com.stockaccounting.listeners.Listeners.class)
 public class TC003_Post_CreateBooking extends TestBase {
@@ -44,30 +48,40 @@ public class TC003_Post_CreateBooking extends TestBase {
 	 */
 	@Test(retryAnalyzer = MyRetry.class,priority = 0,dataProvider = "bookerDataProvider")
 	public void checkResponseBody_TC003(String firstName,String lastName,String totalPrice,String depositPaid, String checkin,String checkout,String additionalNeeds) {
+		//converting String into appropriate parsing
+		Integer totalPri = Integer.parseInt(String.valueOf(totalPrice.trim()));
+		Boolean depositPay = Boolean.parseBoolean(String.valueOf(depositPaid.trim()));
+		
+		Bookingdates dates = new Bookingdates();
+		dates.setCheckin(checkin.trim());
+		dates.setCheckout(checkout.trim());
+		
+		BookingRequest request = new BookingRequest();
+		request.setFirstname(firstName.trim());
+		request.setLastname(lastName.trim());
+		request.setTotalprice(totalPri);
+		request.setDepositpaid(depositPay);
+		request.setAdditionalneeds(additionalNeeds.trim());
+		request.setBookingdates(dates);
+		
 		Response response = RestAssured.given()
 				   					   .contentType("application/json")
 				   					   .accept("application/json")
-				   					   .body("{\r\n"
-									   		+ "    \"firstname\": \""+firstName.trim()+"\",\r\n"
-									   		+ "    \"lastname\": \""+lastName.trim()+"\",\r\n"
-									   		+ "    \"totalprice\": "+totalPrice.trim()+",\r\n"
-									   		+ "    \"depositpaid\": "+depositPaid.trim()+",\r\n"
-									   		+ "    \"bookingdates\": {\r\n"
-									   		+ "        \"checkin\": \""+checkin.trim()+"\",\r\n"
-									   		+ "        \"checkout\": \""+checkout.trim()+"\"\r\n"
-									   		+ "    },\r\n"
-									   		+ "    \"additionalneeds\": \""+additionalNeeds.trim()+"\"\r\n"
-									   		+ "}")
+				   					   .body(request)
 				   					   .post("/booking");
-		log.info("Json Response " + response.getBody().jsonPath().prettify());
-		String body = response.getBody().asString();
-		Assert.assertEquals(body.contains(firstName),true);
-		Assert.assertEquals(body.contains(lastName), true);
-		Assert.assertEquals(body.contains(totalPrice), true);
-		Assert.assertEquals(body.contains(depositPaid), true);
-		Assert.assertEquals(body.contains(checkin), true);
-		Assert.assertEquals(body.contains(checkout), true);
-		Assert.assertEquals(body.contains(additionalNeeds), true);
+		//converting payload into pojo
+		BookingResponse resp = response.as(BookingResponse.class, ObjectMapperType.GSON);
+		
+		log.info("Json Response " + resp);
+		if(resp.getBookingid()!=0 || resp.getBookingid()!=null) {
+		Assert.assertEquals(resp.getBooking().getFirstname(),firstName);
+		Assert.assertEquals(resp.getBooking().getLastname(),lastName);
+		Assert.assertEquals(resp.getBooking().getTotalprice(),totalPri);
+		Assert.assertEquals(resp.getBooking().getDepositpaid(),depositPay);
+		Assert.assertEquals(resp.getBooking().getBookingdates().getCheckin(),checkin);
+		Assert.assertEquals(resp.getBooking().getBookingdates().getCheckout(),checkout);
+		Assert.assertEquals(resp.getBooking().getAdditionalneeds(),additionalNeeds);
+		}
 	}
 	/***
 	 * This method is used to fetch data from Excel sheet and store it 

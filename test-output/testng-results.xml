@@ -1,204 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="37" passed="37" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="5" total="9" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-28T17:39:46 IST" name="Main_Test_Suite" finished-at="2022-05-28T17:42:28 IST" duration-ms="161995">
+  <suite name="Default suite" duration-ms="39211" started-at="2022-06-02T06:47:17 IST" finished-at="2022-06-02T06:47:57 IST">
     <groups>
     </groups>
-    <test started-at="2022-05-28T17:39:46 IST" name="RestAssuredTests" finished-at="2022-05-28T17:42:28 IST" duration-ms="161995">
-      <class name="com.bookerapi.testcases.TC001_Get_All_Booking_Ids">
-        <test-method is-config="true" signature="getAllBookingIds()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:47 IST" name="getAllBookingIds" finished-at="2022-05-28T17:39:53 IST" duration-ms="6654" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllBookingIds -->
-        <test-method signature="checkContentEncoding_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:53 IST" name="checkContentEncoding_TC001" finished-at="2022-05-28T17:39:53 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentEncoding_TC001 -->
-        <test-method signature="checkContentLength_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:53 IST" name="checkContentLength_TC001" finished-at="2022-05-28T17:39:53 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentLength_TC001 -->
-        <test-method signature="checkContentType_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:53 IST" name="checkContentType_TC001" finished-at="2022-05-28T17:39:53 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentType_TC001 -->
-        <test-method signature="checkCookies_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:53 IST" name="checkCookies_TC001" finished-at="2022-05-28T17:39:53 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkCookies_TC001 -->
-        <test-method signature="checkResponseBody_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:53 IST" name="checkResponseBody_TC001" finished-at="2022-05-28T17:39:54 IST" duration-ms="134" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseBody_TC001 -->
-        <test-method signature="checkResponseTime_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:54 IST" name="checkResponseTime_TC001" finished-at="2022-05-28T17:39:54 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseTime_TC001 -->
-        <test-method signature="checkServerType_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:54 IST" name="checkServerType_TC001" finished-at="2022-05-28T17:39:54 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkServerType_TC001 -->
-        <test-method signature="checkStatusCode_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:54 IST" name="checkStatusCode_TC001" finished-at="2022-05-28T17:39:54 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusCode_TC001 -->
-        <test-method signature="checkStatusLine_TC001()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:54 IST" name="checkStatusLine_TC001" finished-at="2022-05-28T17:39:54 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusLine_TC001 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bookerapi.testcases.TC001_Get_All_Booking_Ids@70cf32e3]" started-at="2022-05-28T17:39:54 IST" name="tearDown" finished-at="2022-05-28T17:39:54 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.bookerapi.testcases.TC001_Get_All_Booking_Ids -->
-      <class name="com.bookerapi.testcases.TC004_Update_Booking">
-        <test-method is-config="true" signature="updateBooking()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:07 IST" name="updateBooking" finished-at="2022-05-28T17:41:13 IST" duration-ms="6333" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateBooking -->
-        <test-method signature="checkContentEncoder_TC004()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:13 IST" name="checkContentEncoder_TC004" finished-at="2022-05-28T17:41:13 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentEncoder_TC004 -->
-        <test-method is-config="true" signature="updateBooking()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:13 IST" name="updateBooking" finished-at="2022-05-28T17:41:20 IST" duration-ms="6363" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateBooking -->
-        <test-method signature="checkContentType_TC004()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:20 IST" name="checkContentType_TC004" finished-at="2022-05-28T17:41:20 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentType_TC004 -->
-        <test-method is-config="true" signature="updateBooking()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:20 IST" name="updateBooking" finished-at="2022-05-28T17:41:26 IST" duration-ms="6471" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateBooking -->
-        <test-method signature="checkResponseBody_TC004(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:26 IST" name="checkResponseBody_TC004" data-provider="bookerDataProvider" finished-at="2022-05-28T17:41:27 IST" duration-ms="1326" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Radhey]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Garode]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10000]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[2020-03-21]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[2022-09-26]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Dinner]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseBody_TC004 -->
-        <test-method is-config="true" signature="updateBooking()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:27 IST" name="updateBooking" finished-at="2022-05-28T17:41:34 IST" duration-ms="6365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateBooking -->
-        <test-method signature="checkServerType_TC004()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:34 IST" name="checkServerType_TC004" finished-at="2022-05-28T17:41:34 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkServerType_TC004 -->
-        <test-method is-config="true" signature="updateBooking()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:34 IST" name="updateBooking" finished-at="2022-05-28T17:41:40 IST" duration-ms="6278" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateBooking -->
-        <test-method signature="checkStatusCode_TC004()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:40 IST" name="checkStatusCode_TC004" finished-at="2022-05-28T17:41:40 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusCode_TC004 -->
-        <test-method is-config="true" signature="updateBooking()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:40 IST" name="updateBooking" finished-at="2022-05-28T17:41:46 IST" duration-ms="6383" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateBooking -->
-        <test-method signature="checkStatusLine_TC004()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:46 IST" name="checkStatusLine_TC004" finished-at="2022-05-28T17:41:46 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusLine_TC004 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bookerapi.testcases.TC004_Update_Booking@6abdec0e]" started-at="2022-05-28T17:41:46 IST" name="tearDown" finished-at="2022-05-28T17:41:46 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.bookerapi.testcases.TC004_Update_Booking -->
-      <class name="com.bookerapi.testcases.TC002_Get_Booking_By_Id">
-        <test-method is-config="true" signature="getBookById()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:39:54 IST" name="getBookById" finished-at="2022-05-28T17:40:00 IST" duration-ms="6493" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBookById -->
-        <test-method signature="checkContentLength_TC002()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="checkContentLength_TC002" finished-at="2022-05-28T17:40:00 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentLength_TC002 -->
-        <test-method signature="checkContententType_TC002()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="checkContententType_TC002" finished-at="2022-05-28T17:40:00 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContententType_TC002 -->
-        <test-method signature="checkResponseBody_TC002()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="checkResponseBody_TC002" finished-at="2022-05-28T17:40:00 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseBody_TC002 -->
-        <test-method signature="checkResponseTime_TC002()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="checkResponseTime_TC002" finished-at="2022-05-28T17:40:00 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseTime_TC002 -->
-        <test-method signature="checkStatusCode_TC002()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="checkStatusCode_TC002" finished-at="2022-05-28T17:40:00 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusCode_TC002 -->
-        <test-method signature="checkStatusLine_TC002()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="checkStatusLine_TC002" finished-at="2022-05-28T17:40:00 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusLine_TC002 -->
-        <test-method signature="tearDown()[pri:0, instance:com.bookerapi.testcases.TC002_Get_Booking_By_Id@788ba63e]" started-at="2022-05-28T17:40:00 IST" name="tearDown" finished-at="2022-05-28T17:40:00 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.bookerapi.testcases.TC002_Get_Booking_By_Id -->
+    <test name="Default test" duration-ms="39211" started-at="2022-06-02T06:47:17 IST" finished-at="2022-06-02T06:47:57 IST">
       <class name="com.bookerapi.testcases.TC003_Post_CreateBooking">
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:00 IST" name="createBooking" finished-at="2022-05-28T17:40:07 IST" duration-ms="6824" status="PASS">
+        <test-method status="PASS" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="createBooking" is-config="true" duration-ms="10017" started-at="2022-06-02T06:47:19 IST" finished-at="2022-06-02T06:47:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createBooking -->
-        <test-method signature="checkContentEncoder_TC003()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:07 IST" name="checkContentEncoder_TC003" finished-at="2022-05-28T17:40:07 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentEncoder_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:07 IST" name="createBooking" finished-at="2022-05-28T17:40:13 IST" duration-ms="6295" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBooking -->
-        <test-method signature="checkContentType_TC003()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:13 IST" name="checkContentType_TC003" finished-at="2022-05-28T17:40:13 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentType_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:16 IST" name="createBooking" finished-at="2022-05-28T17:40:22 IST" duration-ms="6376" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBooking -->
-        <test-method signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:22 IST" name="checkResponseBody_TC003" data-provider="bookerDataProvider" finished-at="2022-05-28T17:40:24 IST" duration-ms="1676" status="PASS">
+        <test-method status="PASS" signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="checkResponseBody_TC003" duration-ms="1800" started-at="2022-06-02T06:47:29 IST" data-provider="bookerDataProvider" finished-at="2022-06-02T06:47:31 IST">
           <params>
             <param index="0">
               <value>
@@ -239,11 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseBody_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:24 IST" name="createBooking" finished-at="2022-05-28T17:40:30 IST" duration-ms="6321" status="PASS">
+        <test-method status="PASS" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="createBooking" is-config="true" duration-ms="6829" started-at="2022-06-02T06:47:31 IST" finished-at="2022-06-02T06:47:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createBooking -->
-        <test-method signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:30 IST" name="checkResponseBody_TC003" data-provider="bookerDataProvider" finished-at="2022-05-28T17:40:32 IST" duration-ms="1573" status="PASS">
+        <test-method status="PASS" signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="checkResponseBody_TC003" duration-ms="1944" started-at="2022-06-02T06:47:38 IST" data-provider="bookerDataProvider" finished-at="2022-06-02T06:47:40 IST">
           <params>
             <param index="0">
               <value>
@@ -284,11 +97,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseBody_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:32 IST" name="createBooking" finished-at="2022-05-28T17:40:38 IST" duration-ms="6748" status="PASS">
+        <test-method status="PASS" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="createBooking" is-config="true" duration-ms="6315" started-at="2022-06-02T06:47:40 IST" finished-at="2022-06-02T06:47:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createBooking -->
-        <test-method signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:38 IST" name="checkResponseBody_TC003" data-provider="bookerDataProvider" finished-at="2022-05-28T17:40:40 IST" duration-ms="1491" status="PASS">
+        <test-method status="PASS" signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="checkResponseBody_TC003" duration-ms="2094" started-at="2022-06-02T06:47:46 IST" data-provider="bookerDataProvider" finished-at="2022-06-02T06:47:48 IST">
           <params>
             <param index="0">
               <value>
@@ -329,11 +142,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseBody_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:40 IST" name="createBooking" finished-at="2022-05-28T17:40:46 IST" duration-ms="6308" status="PASS">
+        <test-method status="PASS" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="createBooking" is-config="true" duration-ms="6423" started-at="2022-06-02T06:47:48 IST" finished-at="2022-06-02T06:47:55 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createBooking -->
-        <test-method signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:46 IST" name="checkResponseBody_TC003" data-provider="bookerDataProvider" finished-at="2022-05-28T17:40:48 IST" duration-ms="1515" status="PASS">
+        <test-method status="PASS" signature="checkResponseBody_TC003(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="checkResponseBody_TC003" duration-ms="1651" started-at="2022-06-02T06:47:55 IST" data-provider="bookerDataProvider" finished-at="2022-06-02T06:47:57 IST">
           <params>
             <param index="0">
               <value>
@@ -374,89 +187,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseBody_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:48 IST" name="createBooking" finished-at="2022-05-28T17:40:54 IST" duration-ms="6352" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBooking -->
-        <test-method signature="checkServerType_TC003()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:54 IST" name="checkServerType_TC003" finished-at="2022-05-28T17:40:54 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkServerType_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:40:54 IST" name="createBooking" finished-at="2022-05-28T17:41:00 IST" duration-ms="6412" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBooking -->
-        <test-method signature="checkStatusCode_TC003()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:41:00 IST" name="checkStatusCode_TC003" finished-at="2022-05-28T17:41:00 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusCode_TC003 -->
-        <test-method is-config="true" signature="createBooking()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:41:00 IST" name="createBooking" finished-at="2022-05-28T17:41:07 IST" duration-ms="6487" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBooking -->
-        <test-method signature="checkStatusLine()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:41:07 IST" name="checkStatusLine" finished-at="2022-05-28T17:41:07 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusLine -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@12a14b74]" started-at="2022-05-28T17:41:07 IST" name="tearDown" finished-at="2022-05-28T17:41:07 IST" duration-ms="4" status="PASS">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.bookerapi.testcases.TC003_Post_CreateBooking@365185bd]" name="tearDown" is-config="true" duration-ms="2" started-at="2022-06-02T06:47:57 IST" finished-at="2022-06-02T06:47:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.bookerapi.testcases.TC003_Post_CreateBooking -->
-      <class name="com.bookerapi.testcases.TC005_Delete_Booking">
-        <test-method is-config="true" signature="deleteBooking()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:41:46 IST" name="deleteBooking" finished-at="2022-05-28T17:41:53 IST" duration-ms="6433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBooking -->
-        <test-method signature="checkContentEncoder_TC005()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:41:53 IST" name="checkContentEncoder_TC005" finished-at="2022-05-28T17:41:53 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentEncoder_TC005 -->
-        <test-method is-config="true" signature="deleteBooking()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:41:53 IST" name="deleteBooking" finished-at="2022-05-28T17:41:59 IST" duration-ms="6340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBooking -->
-        <test-method signature="checkContentType_TC005()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:41:59 IST" name="checkContentType_TC005" finished-at="2022-05-28T17:41:59 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkContentType_TC005 -->
-        <test-method is-config="true" signature="deleteBooking()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:41:59 IST" name="deleteBooking" finished-at="2022-05-28T17:42:06 IST" duration-ms="6420" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBooking -->
-        <test-method signature="checkResponseBody_TC005()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:06 IST" name="checkResponseBody_TC005" finished-at="2022-05-28T17:42:09 IST" duration-ms="3356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkResponseBody_TC005 -->
-        <test-method is-config="true" signature="deleteBooking()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:09 IST" name="deleteBooking" finished-at="2022-05-28T17:42:16 IST" duration-ms="6503" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBooking -->
-        <test-method signature="checkServerType_TC005()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:16 IST" name="checkServerType_TC005" finished-at="2022-05-28T17:42:16 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkServerType_TC005 -->
-        <test-method is-config="true" signature="deleteBooking()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:16 IST" name="deleteBooking" finished-at="2022-05-28T17:42:22 IST" duration-ms="6323" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBooking -->
-        <test-method signature="checkStatusCode_TC005()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:22 IST" name="checkStatusCode_TC005" finished-at="2022-05-28T17:42:22 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusCode_TC005 -->
-        <test-method is-config="true" signature="deleteBooking()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:22 IST" name="deleteBooking" finished-at="2022-05-28T17:42:28 IST" duration-ms="6611" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBooking -->
-        <test-method signature="checkStatusLine_TC005()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:28 IST" name="checkStatusLine_TC005" finished-at="2022-05-28T17:42:28 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkStatusLine_TC005 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.bookerapi.testcases.TC005_Delete_Booking@28f4f300]" started-at="2022-05-28T17:42:28 IST" name="tearDown" finished-at="2022-05-28T17:42:28 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.bookerapi.testcases.TC005_Delete_Booking -->
-    </test> <!-- RestAssuredTests -->
-  </suite> <!-- Main_Test_Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
