@@ -13,6 +13,8 @@ import org.apache.log4j.PropertyConfigurator;
 import org.electropedia.constants.AppConstants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 
 public class TestBase {
 
@@ -22,6 +24,7 @@ public class TestBase {
 	
 	public TestBase() {
 		super();
+		loggerSetUp();
 		try {
 			FileInputStream fi = new FileInputStream(AppConstants.CONFIG_PPROPERTY_FILEPATH);
 			prop = new Properties();
@@ -45,5 +48,10 @@ public class TestBase {
 		log = Logger.getLogger("Electropedia");
 		PropertyConfigurator.configure("log4j.properties");
 		log.setLevel(Level.DEBUG);
+	}
+	
+	@AfterSuite
+	public void tearDown() {
+		driver.close();
 	}
 }

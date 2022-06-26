@@ -99,7 +99,7 @@ public class XLUtils extends TestBase{
 			file = new FileInputStream(xlfileName);
 			workbook = new XSSFWorkbook(file);
 			sheet = workbook.getSheet(xlSheetName);
-			row = sheet.getRow(rowNo);
+			row = sheet.createRow(rowNo);
 			cell = row.createCell(columnNo);
 			cell.setCellValue(data);
 			fileOut = new FileOutputStream(xlfileName);

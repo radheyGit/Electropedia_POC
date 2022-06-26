@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class DiscriptionPageTest extends TestBase{
+public class TC002_DiscriptionPageTest extends TestBase{
 
 	VocabularyPage vocabularyPage;
 	DiscriptionPage discriptionPage;
@@ -26,7 +26,7 @@ public class DiscriptionPageTest extends TestBase{
 	}
 	
 	@Test
-	public void getDataFromTable() {
-		discriptionPage.getDataFromTable();
+	public void saveIEVRefDataIntoTable() {
+		discriptionPage.getIevRefDataFromTable();
 	}
 }

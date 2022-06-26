@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class VocabularyPageTest extends TestBase{
+public class TC001_VocabularyPageTest extends TestBase{
 	
 	VocabularyPage vocabularyPage;
 	DiscriptionPage checkLink;
